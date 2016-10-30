@@ -1,0 +1,81 @@
+
+.gototopbn{
+   @include border;
+   @include btnstyle($light:#c6c6c6,$dark:#bdbdbd);
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 50;
+  text-align: center;
+  a{
+    @include display(null,20px,null,null);   
+    color: $color_white;
+    line-height: 70px;
+  }
+}
+
+
+/* 購物車item按鈕 */
+.green {
+ @include btnstyle;
+}
+
+.btn_items{
+   float: right;
+	width: 120px;
+	height: 50px;
+	@include t-shadow(0.3);
+	@include display(inline-block,null,10px 0 0 0,null);
+a{
+	@include display(block,null,null,null);
+	line-height: 50px;
+  color: $color_white;
+	text-align: center; 
+	}
+img{
+	@include display(null,null
+		,null,relative) {	top: 6px;
+		left: 2px;	};
+}
+span{
+	@include display(null,null,0 10px 0 0,null);
+	 @include t-shadow;
+}
+}
+
+
+/* 0000000000000左右小綠按鈕00000000000 */
+
+.product_list_btn{
+    width: 24px;
+    height: 24px;
+    @include border-radius(5px);
+    cursor: pointer;
+    a{
+    @include display(block,null,2px 0 0 3px,relative);   
+   color:$color_white; 
+}
+}
+
+
+
+
+
+/* addcart按鈕 */
+.black{
+ @include btnstyle(#656565, #454545);
+}
+
+
+.addacrt_btn{
+    width: 120px;
+    height: 33px;
+    @include border(5px);
+    cursor: pointer;
+    float: right;
+}
+
+
+

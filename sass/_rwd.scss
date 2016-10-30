@@ -1,0 +1,136 @@
+
+
+
+.topbar_wrap{
+          //電腦版
+    @include pcs-width {
+                width:90%;
+         }
+      }
+
+.topbarright{
+    @include pcs-width {
+            float: left;
+margin: 10px 0; 
+         }
+    @include pads-width {
+display: none;
+         }
+         
+      }
+
+.main_wrap {
+    @include pcs-width {
+             width:90%;
+         }
+}
+
+.serch_icon{
+    @include pcs-width {
+margin-top: 20px;
+float: left;
+         }
+
+}
+
+
+.head_menu ul{
+    @include pads-width {
+	margin: 5% 0 ;}
+	li{
+	    @include pads-width {
+	text-align: center;
+	width: 48%;
+	border: 1px solid #c6c6c6;
+	margin: 1% 1%;
+	         }
+	} 
+
+
+
+}
+
+.btn_items{
+    @include pcs-width {
+	float: left;
+	margin-bottom: 10px;
+         }
+    @include pads-width {
+width: 96%;
+margin: 0 2% 5% 2%;
+         }
+
+}
+
+.main_banner_info_btn{
+    @include pcs-width {
+position: static;
+         }
+    @include pads-width {
+width: 98%;
+    margin:5% 0 1% 0;
+         }
+
+}
+
+.product_shop_pic img{
+    @include phone-width {
+width: 100vh;
+         }	
+}
+
+.md_list_brand{
+    @include pcs-width {
+	width: 100%;
+	position: static;
+         }	
+}
+
+.brand_icon ul li{
+    @include pad-width {
+    width: 33.3333%;
+         }
+    @include pads-width {	
+	width: 50%;
+         }
+}
+
+.follow_us,.recent_posts,.contacts,.people_say{
+    @include pcs-width {
+    width: 33.3333%;
+         }   
+
+    @include pad-width {
+     width: 50%;
+     margin: 3% 0;
+         }	
+    @include pads-width {
+     width: 100%;
+margin: 3% 0;
+         }	
+}
+
+.bot_bar_wrap{
+    @include pcs-width {
+    width: 90%;
+         } 	
+}
+
+.bot_list{
+    @include pads-width {
+    display: none;
+         } 		
+}
+
+.copyright{
+    @include pcs-width {
+    position: static;
+margin-top: 10px;
+         }
+}
+
+.gototopbn {
+    @include pad-width {
+    	bottom: 40px;
+         }	
+}

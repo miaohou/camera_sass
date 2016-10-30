@@ -1,0 +1,109 @@
+//.............最上面
+
+.topbarleft {
+    float: left;
+}
+
+.topbar_menulist {
+	@include display(inline,null,0 40px 0 0,relative);	
+    line-height: $line-height-s*2;    
+    >a{
+		color: $color_highlight;
+}
+    span{
+		color: $color_highlight;
+}
+}
+
+.list{
+	@include display(none,null,null,absolute) {
+     	top: 22px;
+	right: 0px;}   	
+
+	border: $line-l; 
+	@include border(5px);
+	background-color: $color_white;
+    z-index: 50;
+    display: none;
+
+    li{
+	line-height: $line-height-s;}
+
+	a{
+	@include display(block,3px 15px,null,null);
+
+    &:hover{
+    color: $color_highlight;
+    background-color: $color_bg;}
+    }
+}
+
+.topbarright {
+    float: right;
+  li {	@include display(inline,null,null,null); }
+
+  a {
+	@include display(null,0 10px,null,null);
+    border-left: $line-l;
+  }
+}
+
+//.............主logo區
+
+.logo a {
+    float: left;
+    @include bglogo("logo.png");
+    @include texthide;
+    &:hover{
+  opacity: 0.8; 
+}
+}
+
+.serch_icon{
+float: right;
+  input{
+        @include border(5px);
+      border: $line-l;
+      width: 250px;
+      height: 35px;
+     @include display(null,0 0 0 5px,null,null);
+      letter-spacing: 1px;  
+  }
+}
+
+.fa-stack{
+  width: 1.8em;
+}
+
+.icon_color a{
+  color: $icon_color;
+  &:hover{
+  opacity: 0.8; 
+}   
+}
+
+//.............menu區
+.dot_line {
+@include bg("dot_line.png");
+    background-repeat: repeat-x;
+    height: 7px;
+}
+
+.head_menu {
+ @include display(null,null,40px 0,null);
+  
+    ul {float: left;
+
+  >li{
+ @include display(inline-block,0 20px 0 0,null,null);
+  float: left;      
+  >a{
+     @include display(block,30px 0 0 0,null,null);
+    color: #000;
+    height: 75px;
+  &:hover{
+  color: $color_highlight;}
+  }  
+  } 
+}
+} 

@@ -1,0 +1,130 @@
+
+/* CHECK OUR AMAZING大字 */
+.main_banner_title{
+    font-size: $font-size-l;
+    @include display(inline-block,null,5px 0,null);   
+    letter-spacing: -1px;
+    font-family: 'Roboto Condensed', sans-serif;
+    span{
+    	font-weight: $font-weight-border;
+    }	
+}
+
+
+//.............主BN區
+.main_banner_info{
+    background-color: $color_white;
+    border: 1px solid $color_white;
+   box-shadow: 0px 2px 1px rgba(0,0,0,0.2);
+    @include display(null,20px,null,relative);   
+}
+.main_banner_info_btn{
+    width: 160px;
+    height: 50px;
+    @include border(5px);
+    @include t-shadow;
+    cursor: pointer;
+    @include display(null,null,null,absolute) {
+right: 15px;
+top: 20px;}
+    font-size: $font-size-s;
+}
+
+
+
+/* 商品標題 */
+.product_list {
+    @include display(null,null,50px 0 30px 0,relative);   
+    h3 {
+    @include bg("bg_img.jpg");
+    @include display(null,0 30px 0 0,null,relative);   
+    float: left;
+}
+ul{
+   position: absolute;
+   top: -5px;
+   right: 0px;
+   li{
+display: inline-block;
+
+}
+}
+
+
+}
+.md_list{
+    width: 94%;
+}
+
+
+/* 商品 */
+.product_shop {
+    width: 95%;
+    @include box;
+    @include display(inline-block,null,0 5% 0 0,relative);
+
+}
+ 
+.product_price {
+    @include display(null,null,10px 20px,relative);   
+    span {
+    line-height: $line-height-s*3;
+    font-size: 18px;
+
+    float: left;
+}
+}
+
+
+.product_price_info{    
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    @include display(null,20px,null,null);
+    h3{
+        font-weight: $font-weight-border;
+        font-size: $font-size-m;
+        letter-spacing: 0.5px;
+    }
+    p{
+    @include display(null,10px 0 0 0,null,null);
+        line-height: 1.5em;
+    }
+}
+
+.product_view{
+    @include display(block,10px 20px,null,null);
+    color: $color_highlight;
+    letter-spacing: $spacing-s;
+    font-weight: $font-weight-s;
+
+}
+
+/* 綠saleicon */
+.sale_icon{
+ @include circle;
+ @include display(null,null,null,absolute) {
+     top: 10px;
+    left: 10px;}   
+}
+
+/* CHECK OUR BRANDS*/
+
+.brand_icon{
+    margin-bottom: 30px;
+    @include display(null,null,0 0 30px 0,null);
+
+    ul li{
+    @include display(null,15px 0,null,null);
+    @include box($line-l,null,#fff);
+    width: 20%;
+    text-align: center;
+    float: left;    
+        a{
+        @include display(block,null,null,null);
+            height: 90px;}
+        &:hover{
+        opacity: 0.8;}
+    }
+}
+
+

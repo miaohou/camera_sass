@@ -1,0 +1,35 @@
+%clearfix{
+  clear: both;
+}
+
+.clearfix{
+  clear: both;
+}
+
+////中間寬度
+%wrap{
+max-width: 1180px;
+    margin: 0 auto;	
+}
+
+
+////PRODUCTS大標
+%all-h3{
+    font-weight: $font-weight-border;
+    font-size: $font-size-m;
+    letter-spacing: 0.5px;
+}
+
+h3{	
+	@extend %all-h3;
+
+	.footer &{
+	margin-bottom: 20px; 
+}
+
+}
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+.topbar,.main{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+//..........底圖
+.main {
+ background-image: url(../images/bg_img.jpg);
+ max-width: 100%;
+}
+
+//.............上下bar
+.topbar {
+  @include bar;
+    border-bottom:$line-l;
+    padding: 6px;
+}
+
+.bot_bar {
+    @include bar(#000);
+}
+
+//.............1180wrap
+.wrap{
+	@extend %wrap;
+}
+
+.topbar_wrap{
+	position: relative;
+	}
+.bot_bar_wrap{
+    @include display(null,10px 0,null,relative);   
+    }
+
+.header{
+	@include display(null,50px 0 0 0,null,null);	
+}
+
+.footer {
+	border-top: $line-l;
+	background-color: $color_white;
+	@include display(null,50px 0,null,null);	
+h3{
+    @include display(null,null,0 0 20px 0,null);
+}
+}

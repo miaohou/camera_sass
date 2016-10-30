@@ -1,0 +1,167 @@
+//字size
+//h3
+$font-weight-border: 900;
+$font-weight-s: 700;
+$font-size-m:20px;
+//h2
+$font-size-l:40px;
+//頭尾小字
+$font-size-s:15px;
+
+//字行高
+$line-height-s:10px;
+$line-height-m:22px;
+
+//字間
+$spacing-s:1px;
+
+//color
+$color_white:#fff;
+$color_highlight: #98b827;//綠
+
+
+$color_sub:#a0a0a0;//字灰色
+
+$color_border:#c6c6c6;//灰色
+
+//線色
+$color_bg:#eee;
+
+//icon色
+$icon_color:#bdbdbd;
+
+
+//線
+$line-s: 1px solid $color_bg;
+$line-l: 1px solid $color_border;
+$line-m: 3px solid $color_highlight;
+
+
+//先針對media queries的width設為變數
+
+$pc-media:960px;
+$pcs-media:930px;
+$pad-media:760px;
+$pads-media:569px;
+$phone-media:480px;
+$phones-media:479px;
+
+//imgsprite
+$icon-spacing: 20px;
+@import "icon/*.png";
+@include all-icon-sprites;
+
+//間距margin position和display~~
+@mixin display ($disp,$padding,$margin,$setposition) {
+  display: $disp;  
+  padding: $padding;
+  margin: $margin;
+  position: $setposition;
+  @content;
+}
+
+//logo圖片
+@mixin bglogo($bg){
+  background:url("../images/#{$bg}");
+  width:image-width("../images/#{$bg}");
+  height:image-height("../images/#{$bg}");
+}
+@mixin texthide{  
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+@mixin bg($bg){
+  background:url("../images/#{$bg}");
+
+}
+
+@mixin line($color_border:#c6c6c6){
+  border: 1px solid $color_border;
+}
+
+
+
+//框框box
+@mixin box($line-l:1px solid #c6c6c6,$br:5px,$bg:#fff){
+    background: $bg;
+    border: $line-l;
+    border-radius:$br; 
+}
+
+//...................按鈕樣式
+@mixin btnstyle($light:#cae387,$dark:#a5cb5e){
+    border: 1px solid darken($dark,5%);
+  color: $color_white;
+ @include t-shadow; 
+ @include border(5px);
+ @include background-image(linear-gradient($light, $dark));
+  &:hover {
+  @include background-image(linear-gradient($dark, $light));
+  }
+  &:active {border: 1px solid #fff;}
+
+  @content;
+  
+}
+//字陰影
+@mixin t-shadow($dark:0.3){
+ text-shadow: 1px 1px 1px rgba(0,0,0,$dark);
+}
+
+//按鈕圓弧
+@mixin border($icon-border:10px){
+ border-radius:$icon-border; 
+}
+
+
+//上下bar
+@mixin bar($bgcolor:#fff,$font-size-s:15px,
+           $color_sub:#a0a0a0){
+   background-color: $bgcolor;
+  font-size: $font-size-s;
+  color: $color_sub;
+  border-top: $line-m;
+} 
+
+//圓形sale icon
+@mixin circle($c_size:60px,$color_highlight:#98b827) {
+	@include border-radius(50%);
+  width: $c_size;
+  height: $c_size;
+  color:$color_white;
+  line-height: $c_size;
+  background:$color_highlight;
+  text-align: center;
+} 
+
+
+
+//930
+ @mixin pcs-width() {
+  @media(max-width: $pcs-media) {
+               @content;
+         }
+    }
+//760
+ @mixin pad-width() {
+  @media(max-width: $pad-media) {
+               @content;
+         }
+    }
+
+//569
+ @mixin pads-width() {
+  @media(max-width: $pads-media) {
+               @content;
+         }
+    }
+
+//480
+ @mixin phone-width() {
+  @media(max-width: $phone-media) {
+               @content;
+         }
+    }
+    

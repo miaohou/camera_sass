@@ -1,0 +1,113 @@
+/* 0000000000000000000footer區00000000000 */
+
+.follow_us{
+    float: left;
+    width: 25%;
+    img{
+    width: 250px;
+    }
+    h3{
+       @include display(null,null,20px 0 20px 0,null);
+    }
+}
+
+.recent_posts{
+    float: left;
+    width: 25%;
+
+}
+
+.posts_first{ 
+    h4{
+    @include display(null,null,10px 0 0 0,null);
+    font-weight: $font-weight-s;
+    }  
+        width: 265px;
+        height: 70px;
+        line-height: 25px;
+        @include box($line-l,10px,#fff); 
+        @include display(null,null,0 0 10px 0,null);
+     
+        .hightlight {
+        color: #98b827;}
+
+}
+.posts_pic{
+            float: left;
+        @include display(null,null,0 15px 0 0,null);
+
+      @extend .icon-recent_01; 
+   width: image-width("recent_01.png");
+   height:  image-height("recent_01.png");    
+}
+
+.second{
+      @extend .icon-recent_02; 
+   width: image-width("recent_02.png");
+   height:  image-height("recent_02.png");        
+}
+
+.contacts{
+    float: left;
+    width: 22%;
+    p{
+        line-height: 22px;}
+
+    ul li{
+    margin-bottom: 20px;}
+
+}
+
+.people_say{
+    float: left;
+    width: 28%;
+   
+}
+
+.circle{
+    border-radius: 50%;
+    border: 4px solid #eee;
+    float: left;
+    @include display(null,null,0 6px 0 0,null);
+   @extend .icon-head_01;
+   width: image-width("head_01.png");
+   height:  image-height("head_01.png");
+position: relative;
+}
+.erica{
+      @extend .icon-head_02; 
+   width: image-width("head_02.png");
+   height:  image-height("head_02.png");
+}
+
+
+figcaption{
+font-weight: $font-weight-s;
+position: absolute;
+bottom: -20px;
+left: 10px;
+}
+
+.people_say_word{
+    float: left;
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.3em;
+    @include box($line-l,10px,#fff); 
+    @include display(null,10px,0 0 20px 10px,null);
+    background: #eee url(../images/say_pic.png)no-repeat right 5px bottom 5px;
+
+}
+
+//.............最下面
+
+.bot_list ul li{
+  @include display(inline,null,0 20px 0 0,null);
+
+}
+
+.copyright{
+  @include display(null,null,null,absolute) {
+    right: 0;
+  top: 10px;};
+}
