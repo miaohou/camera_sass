@@ -65,6 +65,7 @@ $icon-spacing: 20px;
   background:url("../images/#{$bg}");
   width:image-width("../images/#{$bg}");
   height:image-height("../images/#{$bg}");
+  
 }
 @mixin texthide{  
   white-space: nowrap;

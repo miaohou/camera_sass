@@ -30,7 +30,6 @@ display: none;
 margin-top: 20px;
 float: left;
          }
-
 }
 
 
@@ -45,9 +44,15 @@ float: left;
 	margin: 1% 1%;
 	         }
 	} 
+}
 
+.logo a{
+       @include pad-width {
+background-size: cover;
+width: 280px;
+height: 48px;
 
-
+         }   
 }
 
 .btn_items{
@@ -95,9 +100,9 @@ width: 100vh;
          }
 }
 
-.follow_us,.recent_posts,.contacts,.people_say{
+.follow_us,.recent_posts,.contacts{
     @include pcs-width {
-    width: 33.3333%;
+    width: 50%;
          }   
 
     @include pad-width {
@@ -108,6 +113,32 @@ width: 100vh;
      width: 100%;
 margin: 3% 0;
          }	
+}
+
+.people_say{
+     @include pcs-width {
+    width: 50%;
+         }   
+
+    @include pad-width {
+     width: 50%;
+     margin: 3% 0;
+         }  
+    @include pads-width {
+     width: 60%;
+margin: 3% 0;
+         } 
+    @include phone-width {
+     width: 90%;
+margin: 3% 0;
+         }     
+}
+
+.people_say_word{
+     @include phone-width {
+
+margin: 0 0 20px 0;
+         }   
 }
 
 .bot_bar_wrap{
@@ -132,5 +163,6 @@ margin-top: 10px;
 .gototopbn {
     @include pad-width {
     	bottom: 40px;
+        right: 10px;
          }	
 }
